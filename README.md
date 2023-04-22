@@ -9,7 +9,6 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 
 ---
 <br />
-<br />
 
 ## Motivation
 We thought it would be fun to explore this data set and see what team attributes are associated with a team winning. There's a wealth of data in this dataset and it seems to be a solid exercise for general data wrangling to start, opportunities for visualizations throughout, and serves as a good primer to build and evaluate models that predict wins.
@@ -17,20 +16,21 @@ We thought it would be fun to explore this data set and see what team attributes
 The dataset we chose contains the first 10min. stats of approx. 10k ranked games from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.
 <br/>
 
-
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
 <br/>
-**What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?**
+*What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?*
 
 ---
 <br />
-<br />
 
 ## Exploratory Data Analysis
+blah
 
 
+---
+<br />
 
 ### Classification Report: Logistic Regression with all 42 variables <br/>
 Initially we trained the model with all 42 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
@@ -85,10 +85,12 @@ Since League of Legends is a Team vs Team game, it only makes sense to take the 
 We set up the model to have 7 predictors. We can utilize their coefficients to determining how much impact one value will have on a player's winning chances
 
 <br />
-<br />
+
+
 ### Classification Report: Random Forest Classification 
 
-**Trying out different models**
+*Trying out different models*
+<br/>
 Over here we experiment different models. We tried the Random Forest Classificatier and fine tune the hyperparameters to produce an improved accuracy result.
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
 |--------------|---------------|------------|--------------|-------------|
@@ -100,10 +102,13 @@ Over here we experiment different models. We tried the Random Forest Classificat
 
 <br/>
 
+This improved the ROC Curve significantly.
+
 ![ROC2](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/ROC2.png)
 
 <br />
-<br />
+
+
 ### Feature Importance
 
 ![featureimportance](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/featureimportance.png)
@@ -114,11 +119,13 @@ Over here we experiment different models. We tried the Random Forest Classificat
 
 ## Final Note
 
+We have identified some of the factors that have a higher chance of winning the game. They are Gold, Kills. Players should try to gain an upper hand during the first 10 minutes by farming minions and jungle minions so that the chances of the team winning would be increased significantly.
+<br />
 Model Used: Logistic Regression, Random Forest Classifier<br/>
 Others: RFECV, ROC Curve
 
 ### Contributors
-[Clarence](https://github.com/) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
+[Clarence](https://github.com/clarenve) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
 [Albert Yu](https://github.com/Albert481) - Machine Learning, Core Analysis, Improvement<br>
 
 
