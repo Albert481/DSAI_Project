@@ -2,9 +2,10 @@
 ---
 ## Introduction
 
+![featureimportance](repo-images/LOLCover.jpg)
 
-
-![alt text](IMAGE_URL "Source: ")
+<br/>
+League of Legends (LoL) is a highly popular multiplayer online battle arena game with an enormous user base of over 100 million active players worldwide. Riot Games, the game's publisher, hosts professional competitions all year round, attracting millions of viewers. In fact, the 2016 World Championships alone drew in 43 million viewers, surpassing the viewership of the 2016 NBA finals Game 7, which had 30.8 million viewers. Once you start playing LoL, it's easy to see why it's so addictively fun. In the main game, ten players are divided into two teams, blue or red, with the goal of destroying the opposing team's Nexus, which is the main building in their base camp. Collaboration between teammates is crucial to advance on the enemy Nexus while defending one's own, making the game play wonderfully complex.
 
 ---
 <br />
@@ -15,7 +16,10 @@ We thought it would be fun to explore this data set and see what team attributes
 
 The dataset we chose contains the first 10min. stats of approx. 10k ranked games from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.
 <br/>
-[Dataset from Kaggle] (https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
+
+
+Chosen Dataset:
+[Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
 <br/>
 **What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?**
@@ -27,9 +31,9 @@ The dataset we chose contains the first 10min. stats of approx. 10k ranked games
 ## Exploratory Data Analysis
 
 
-## 
-### Classification Report: Logistic Regression with all 42 variables
-Initially we built the model with all 42 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
+
+### Classification Report: Logistic Regression with all 42 variables <br/>
+Initially we trained the model with all 42 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
 
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
 |--------------|---------------|------------|--------------|-------------|
@@ -42,9 +46,10 @@ Initially we built the model with all 42 variables and found that there are many
 <br/>
 We use RFECV method to automatically select the optimal number of features for our model. Instead of specifying the number of features to select in advance with n_features_to_select, we use cross-validation to select the optimal number of features based on the performance of the model, to coarse tune the independent variables from 42 to 28. 
 
-<br/>
-<br/>
-### Classification Report: Logistic Regression with 28 variables
+
+### Classification Report: Logistic Regression with 28 variables <br/>
+Below is the classification report for model we trained with the 28 features selected by the RFECV.
+
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
 |--------------|---------------|------------|--------------|-------------|
 | 0            | 0.70          | 0.76       | 0.73         | 209         |
@@ -53,8 +58,7 @@ We use RFECV method to automatically select the optimal number of features for o
 | Macro Avg    | 0.74          | 0.74       | 0.74         | 447         | 
 | Weighted Avg | 0.74          | 0.74       | 0.74         | 447         |
 
----
-<br />
+
 <br />
 
 A reduction from 42 to 28 features using RFECV is a good start, but whether 28 features is still too many for logistic regression depends on several factors, such as the size and complexity of your dataset, the amount of noise in the data, and the degree of multicollinearity among the features.
@@ -64,7 +68,9 @@ We know that the logistic regression model outputs probabilities (values between
 
 An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positive Rate (FPR) at different classification thresholds.
 <br/>
-![alt text](IMAGE_URL "Source: ")
+<br/>
+
+![ROC1](repo-images/ROC1.png)
 
 <br/>
 <br/>
@@ -93,12 +99,14 @@ Over here we experiment different models. We tried the Random Forest Classificat
 | Weighted Avg | 0.81          | 0.81       | 0.81         | 357         |
 
 <br/>
-![alt text](IMAGE_URL "Source: ")
+
+![ROC2](repo-images/ROC2.png)
 
 <br />
 <br />
 ### Feature Importance
-![alt text](IMAGE_URL "Source: ")
+
+![featureimportance](repo-images/featureimportance.png)
 
 ---
 <br />
@@ -106,7 +114,8 @@ Over here we experiment different models. We tried the Random Forest Classificat
 
 ## Final Note
 
-
+Model Used: Logistic Regression, Random Forest Classifier<br/>
+Others: RFECV, ROC Curve
 
 ### Contributors
 [Clarence](https://github.com/) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
