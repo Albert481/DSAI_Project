@@ -22,7 +22,7 @@ Chosen Dataset:
 
 <br/>
 
-**What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?**
+**What should we do in the early game to maximize our chances of winning?**
 
 ---
 <br />
@@ -87,13 +87,24 @@ Since League of Legends is a Team vs Team game, it only makes sense to take the 
 
 We set up the model to have 7 predictors. We can utilize their coefficients to determining how much impact one value will have on a player's winning chances
 
+```
+df_train['blueTeamWardRetentionRatio'] = (df_train.blueWardsPlaced - df_train.redWardsDestroyed)/df_train.blueWardsPlaced
+df_train['blueTeamNetKills'] = (df_train.blueKills - df_train.redKills)
+df_train['blueTeamJungleMinionsKilledDiff'] = (df_train.blueTotalJungleMinionsKilled - df_train.redTotalJungleMinionsKilled)
+df_train['blueTeamMinionsKilledDiff'] = (df_train.blueTotalMinionsKilled - df_train.redTotalMinionsKilled)
+df_train['blueTeamAvgLevelDiff'] = (df_train.blueAvgLevel - df_train.redAvgLevel)
+df_train['blueTeamCsPerMinuteDiff'] = (df_train.blueCSPerMin - df_train.redCSPerMin)
+df_train['blueTeamGoldPerMinuteDiff'] = (df_train.blueGoldPerMin - df_train.redGoldPerMin)
+```
+
 <br />
 
 ### Classification Report: Random Forest Classification 
 
 *Trying out different models*
 <br/>
-Over here we experiment different models. We tried the Random Forest Classificatier and fine tune the hyperparameters to produce an improved accuracy result.
+Over here we experiment different models. We tried the Random Forest Classifier and fine tune the hyperparameters to produce an improved accuracy result.
+
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
 |--------------|---------------|------------|--------------|-------------|
 | 0            | 0.81          | 0.81       | 0.81         | 179         |
