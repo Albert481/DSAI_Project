@@ -15,6 +15,7 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 <br />
 This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence. Our source code:
 <br />
+
 [SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
 Chosen Dataset:
@@ -23,8 +24,8 @@ Chosen Dataset:
 <br/>
 
 **Motivation & Problem definition**
-*Are we able to predict the outcome of a game based on the early stages?
-*What should we do in the early game to maximize our chances of winning?
+*Are we able to predict the outcome of a game based on the early stages?*
+*What should we do in the early game to maximize our chances of winning?*
 
 ---
 <br />
@@ -132,6 +133,13 @@ Important features derived from Random Forest
 ---
 <br />
 <br />
+
+### Recommendations
+Gold differential between both teams is the most important indicator for a team’s success. Therefore:
+
+*Aim to obtain a gold lead in the early stages of the game through means such as first blood and dragon*
+
+*Maintain said gold lead*
 
 ## Final Note
 
