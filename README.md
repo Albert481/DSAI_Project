@@ -24,13 +24,14 @@ Chosen Dataset:
 <br/>
 
 **Motivation & Problem definition**
+
 *Are we able to predict the outcome of a game based on the early stages?*
+<br/>
 
 *What should we do in the early game to maximize our chances of winning?*
 
 ---
 <br />
-
 
 ## Machine Learning & Optimization
 
