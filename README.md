@@ -10,45 +10,21 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 ---
 <br />
 
-## Motivation
+## About
 
-We thought it would be fun to explore this data set and see what team attributes are associated with a team winning. There's a wealth of data in this dataset and it seems to be a solid exercise for general data wrangling to start, opportunities for visualizations throughout, and serves as a good primer to build and evaluate models that predict wins.
-
-The dataset we chose contains the first 10min. stats of approx. 10k ranked games from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.
-<br/>
+<br />
+This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence. Our source code:
+<br />
+[SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
 <br/>
 
-**What should we do in the early game to maximize our chances of winning?**
-
----
-<br />
-
-## Exploratory Data Analysis
-blah
-
-
----
-<br />
-
-## Visualization
-
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
-
-![winffirstflood](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winfirstblood.png)
-
-![winherald](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winherald.png)
-
-![windragon](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/windragon.png)
-
-![corr](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.png)
-
-![winvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsgold.png)
-
-![winvsxp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsxp.png)
+**Motivation & Problem definition**
+*Are we able to predict the outcome of a game based on the early stages?
+*What should we do in the early game to maximize our chances of winning?
 
 ---
 <br />
