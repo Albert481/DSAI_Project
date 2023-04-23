@@ -54,6 +54,11 @@ blah
 <br />
 
 
+## Machine Learning & Optimization
+
+We chose Logistic Regression over other ML models because it is a simple and interpretable model that works well with binary classification problems.
+
+
 ### Classification Report: Logistic Regression with all 32 variables <br/>
 
 Initially we trained the model with all 32 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
