@@ -11,6 +11,7 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 <br />
 
 ## Motivation
+
 We thought it would be fun to explore this data set and see what team attributes are associated with a team winning. There's a wealth of data in this dataset and it seems to be a solid exercise for general data wrangling to start, opportunities for visualizations throughout, and serves as a good primer to build and evaluate models that predict wins.
 
 The dataset we chose contains the first 10min. stats of approx. 10k ranked games from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.
@@ -20,7 +21,8 @@ Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
 <br/>
-*What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?*
+
+**What factors would affect the outcome of a League of Legends match? Predict the outcome of a game based on in-game values at the 10-minute mark?**
 
 ---
 <br />
@@ -33,6 +35,7 @@ blah
 <br />
 
 ### Classification Report: Logistic Regression with all 32 variables <br/>
+
 Initially we trained the model with all 32 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
 
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
@@ -48,7 +51,8 @@ We use RFECV method to automatically select the optimal number of features for o
 
 
 ### Classification Report: Logistic Regression with 9 variables <br/>
-Below is the classification report for model we trained with the 28 features selected by the RFECV.
+
+Below is the classification report for model we trained with the 9 features selected by the RFECV.
 
 |              | **Precision** | **Recall** | **F1-Score** | **Support** |
 |--------------|---------------|------------|--------------|-------------|
@@ -61,9 +65,11 @@ Below is the classification report for model we trained with the 28 features sel
 
 
 <br/>
+
 We know that the logistic regression model outputs probabilities (values between 0 to 1). In order to make predictions on train data (y_train_pred), we need to convert these probabilities to 1s and 0s. For this we need to decide a threshold probability value above which all the probability values will be classified as 1 and the values below it will be classified as 0. For that, we need to plot the ROC (Receiver Operating Characteristic) curve.
 
-An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positive Rate (FPR) at different classification thresholds.
+An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positive Rate (FPR) at different classification thresholds. A higher AUC indicates better predictions, as it measures the entire two-dimensional area underneath the entire ROC curve. By lowering the classification threshold, more items are classified as positive, resulting in an increase in both False Positives and True Positives.
+
 <br/>
 <br/>
 
@@ -71,6 +77,8 @@ An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positi
 
 <br/>
 <br/>
+
+
 ## Improvement
 Could we reduce the features and improve the model? <br/>
 
@@ -80,7 +88,6 @@ Since League of Legends is a Team vs Team game, it only makes sense to take the 
 We set up the model to have 7 predictors. We can utilize their coefficients to determining how much impact one value will have on a player's winning chances
 
 <br />
-
 
 ### Classification Report: Random Forest Classification 
 
@@ -106,6 +113,8 @@ This improved the ROC Curve significantly.
 
 ### Feature Importance
 
+Important features derived from Random Forest
+
 ![featureimportance](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/featureimportance.png)
 
 ---
@@ -114,8 +123,16 @@ This improved the ROC Curve significantly.
 
 ## Final Note
 
-We have identified some of the factors that have a higher chance of winning the game. They are Gold, Kills. Players should try to gain an upper hand during the first 10 minutes by farming minions and jungle minions so that the chances of the team winning would be increased significantly.
+Our project successfully addressed the problem of predicting the outcome of a League of Legends game based on various in-game metrics. By utilizing machine learning techniques such as Recursive Feature Elimination and the Random Forest Classifier, we were able to identify key features and achieve a significantly higher accuracy rate than previous models.
+
+Our data-driven insights suggest that the gold differential between both teams is the most important indicator for a team’s success. This means that the goal should be to obtain a gold lead in the early game through means such as obtaining first blood and first dragon, and then maintaining the lead throughout the game. By focusing on these key indicators of success, players can increase their chances of winning and improving their overall gameplay.
+
+Furthermore, while our analysis was limited to the Diamond 1 - masters, it is likely that players from other Elos exhibit different gameplay patterns that may require further investigation.
+
+
 <br />
+<br />
+
 Model Used: Logistic Regression, Random Forest Classifier<br/>
 Others: RFECV, ROC Curve
 
