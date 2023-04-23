@@ -8,9 +8,8 @@
 League of Legends (LoL) is a highly popular multiplayer online battle arena game with an enormous user base of over 100 million active players worldwide. Riot Games, the game's publisher, hosts professional competitions all year round, attracting millions of viewers. In fact, the 2016 World Championships alone drew in 43 million viewers, surpassing the viewership of the 2016 NBA finals Game 7, which had 30.8 million viewers. Once you start playing LoL, it's easy to see why it's so addictively fun. In the main game, ten players are divided into two teams, blue or red, with the goal of destroying the opposing team's Nexus, which is the main building in their base camp. Collaboration between teammates is crucial to advance on the enemy Nexus while defending one's own, making the game play wonderfully complex.
 
 ---
-<br />
 
-## Introduction
+### Introduction
 
 <br />
 This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence.
@@ -24,7 +23,7 @@ Chosen Dataset:
 
 ---
 
-**Motivation & Problem Definition**
+### Motivation & Problem Definition
 
 *Are we able to predict the outcome of a game based on the early stages?*
 <br/>
@@ -33,7 +32,7 @@ Chosen Dataset:
 
 ---
 
-**Data Cleaning & Data Preparation**
+### Data Cleaning & Data Preparation
 
 1. Check for completeness of data
 2. Check for duplicates
@@ -44,7 +43,7 @@ Chosen Dataset:
 
 ---
 
-**Exploratory Data Analysis**
+### Exploratory Data Analysis
 <br />
 
 ![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinrate.png)
@@ -73,7 +72,7 @@ Lastly, we plotted 2 boxplots to see the how the difference in kills between bot
 
 ---
 
-## Machine Learning & Optimization
+### Machine Learning & Optimization
 
 We chose Logistic Regression over other ML models because it is a simple and interpretable model that works well with binary classification problems.
 
@@ -123,7 +122,7 @@ An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positi
 <br/>
 
 
-## Improvement
+### Improvement
 Could we reduce the features and improve the model? <br/>
 
 Since League of Legends is a Team vs Team game, it only makes sense to take the Net data and the same blue & red features should be present. This can be easily obtain using the values we created through feature engineering. <br/>
