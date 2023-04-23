@@ -13,7 +13,7 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 ## Introduction
 
 <br />
-This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence. 
+This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence.
 
 Our source code:
 
@@ -22,8 +22,7 @@ Our source code:
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
-<br/>
-
+---
 
 **Motivation & Problem Definition**
 
@@ -48,36 +47,31 @@ Chosen Dataset:
 **Exploratory Data Analysis**
 <br />
 
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinrate.png)
 
 We observe that win rates are about 50% for both teams. This indicates a balanced game with no advantage for being on one team or the other.
 
-![winrateWStats](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrateWStats.png)
+![winrateWStats](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinrateWStats.png)
 
-Plotting vertical bar graphs, we see that First Blood, First Herald and First Dragon are important objectives that improve the winrates by an average of 20%.
+Plotting vertical bar graphs, we see that First Blood, First Herald and First Dragon are important objectives that improve winrates to about 60%
 
-![corre](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.png)
+![corre](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newcorr.png)
 
 A heatmap helpes us visually analyse the relationships between variables. We note that blueGoldDiff and blueExperieneDiff have the highest correlation to winning games. They represent the difference in gold and experience between both teams at the 10 minute mark. We can use scatterplots to visualize this relationship.
 
-![winsvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winratevsgold.png)
+![winsvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinratevsgold.png)
 
 From this scatterplot, we observe that just having a 1000 gold lead at 10 minutes drastically increased the winrate to about 75%. It continues to increase till around a 4700 gold lead where it basically guarantees a win.
 
-![winsvsexp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winratevsexp.png)
+![winsvsexp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinratevsexp.png)
 
 Similarly, we can see a similar relationship with experience lead where it starts at a 75% winrate at a 1000 experience point lead, skyrocketing to a 100% win rate at around 3300 experience points.
 
-![netkillsWin](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/netkillsWin.png)
+![netkillsWin](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newnetkills.png)
 
 Lastly, we plotted 2 boxplots to see the how the difference in kills between both teams at 10 minutes can affect the outcome of the game. Unsurprisingly, what we notice is that winning teams tend to have slightly more net kills.
 
-
-
-
-
-
-<br />
+---
 
 ## Machine Learning & Optimization
 
