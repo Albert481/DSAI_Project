@@ -1,25 +1,20 @@
 # DSAI_Project
 ---
-## Introduction
-
 ![LOLCover](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/LOLCover.jpg)
-
-<br/>
-League of Legends (LoL) is a highly popular multiplayer online battle arena game with an enormous user base of over 100 million active players worldwide. Riot Games, the game's publisher, hosts professional competitions all year round, attracting millions of viewers. In fact, the 2016 World Championships alone drew in 43 million viewers, surpassing the viewership of the 2016 NBA finals Game 7, which had 30.8 million viewers. Once you start playing LoL, it's easy to see why it's so addictively fun. In the main game, ten players are divided into two teams, blue or red, with the goal of destroying the opposing team's Nexus, which is the main building in their base camp. Collaboration between teammates is crucial to advance on the enemy Nexus while defending one's own, making the game play wonderfully complex.
 
 ---
 
 ### Introduction
-
-<br />
 This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence.
 
 Our source code:
-
 [SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
+
+This dataset contains data for ranked game from Diamond 1 - Master
+Size of the dataset is 9879
 
 ---
 
