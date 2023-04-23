@@ -1,60 +1,78 @@
 # DSAI_Project
 ---
-## Introduction
-
 ![LOLCover](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/LOLCover.jpg)
 
-<br/>
-League of Legends (LoL) is a highly popular multiplayer online battle arena game with an enormous user base of over 100 million active players worldwide. Riot Games, the game's publisher, hosts professional competitions all year round, attracting millions of viewers. In fact, the 2016 World Championships alone drew in 43 million viewers, surpassing the viewership of the 2016 NBA finals Game 7, which had 30.8 million viewers. Once you start playing LoL, it's easy to see why it's so addictively fun. In the main game, ten players are divided into two teams, blue or red, with the goal of destroying the opposing team's Nexus, which is the main building in their base camp. Collaboration between teammates is crucial to advance on the enemy Nexus while defending one's own, making the game play wonderfully complex.
+---
+
+### Introduction
+This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence.
+
+Our source code:
+[SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
 ---
-<br />
 
-## Motivation
-
-We thought it would be fun to explore this data set and see what team attributes are associated with a team winning. There's a wealth of data in this dataset and it seems to be a solid exercise for general data wrangling to start, opportunities for visualizations throughout, and serves as a good primer to build and evaluate models that predict wins.
-
-The dataset we chose contains the first 10min. stats of approx. 10k ranked games from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.
-<br/>
+### Dataset
 
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
+This dataset contains data for ranked game from Diamond 1 - Master
+
+Size of the dataset is 9879
+
+---
+
+### Motivation & Problem Definition
+
+*Are we able to predict the outcome of a game based on the early stages?*
 <br/>
 
-**What should we do in the early game to maximize our chances of winning?**
+*What should we do in the early game to maximize our chances of winning?*
 
 ---
-<br />
 
-## Exploratory Data Analysis
-blah
+### Data Cleaning & Data Preparation
 
-
----
-<br />
-
-## Visualization
-
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
-
-![winffirstflood](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winfirstblood.png)
-
-![winherald](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winherald.png)
-
-![windragon](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/windragon.png)
-
-![corr](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.png)
-
-![winvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsgold.png)
-
-![winvsxp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsxp.png)
+1. Check for completeness of data
+2. Check for duplicates
+3. Filtering data to fit our problem
+4. Remove columns that represent same statistics (to avoid multicollinearity)
+5. Remove outliers
+6. Apply min-max normalization
 
 ---
+
+### Exploratory Data Analysis
 <br />
 
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinrate.png)
 
-## Machine Learning & Optimization
+We observe that win rates are about 50% for both teams. This indicates a balanced game with no advantage for being on one team or the other.
+
+![winrateWStats](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinrateWStats.png)
+
+Plotting vertical bar graphs, we see that First Blood, First Herald and First Dragon are important objectives that improve winrates to about 60%
+
+![corre](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newcorr.png)
+
+A heatmap helpes us visually analyse the relationships between variables. We note that blueGoldDiff and blueExperieneDiff have the highest correlation to winning games. They represent the difference in gold and experience between both teams at the 10 minute mark. We can use scatterplots to visualize this relationship.
+
+![winsvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinratevsgold.png)
+
+From this scatterplot, we observe that just having a 1000 gold lead at 10 minutes drastically increased the winrate to about 75%. It continues to increase till around a 4700 gold lead where it basically guarantees a win.
+
+![winsvsexp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newwinratevsexp.png)
+
+Similarly, we can see a similar relationship with experience lead where it starts at a 75% winrate at a 1000 experience point lead, skyrocketing to a 100% win rate at around 3300 experience points.
+
+![netkillsWin](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/newnetkills.png)
+
+Lastly, we plotted 2 boxplots to see the how the difference in kills between both teams at 10 minutes can affect the outcome of the game. Unsurprisingly, what we notice is that winning teams tend to have slightly more net kills.
+
+---
+
+### Machine Learning & Optimization
 
 We chose Logistic Regression over other ML models because it is a simple and interpretable model that works well with binary classification problems.
 
@@ -104,7 +122,7 @@ An ROC curve is nothing but a graph of True Positive Rate (TPR) v/s False Positi
 <br/>
 
 
-## Improvement
+### Improvement
 Could we reduce the features and improve the model? <br/>
 
 Since League of Legends is a Team vs Team game, it only makes sense to take the Net data and the same blue & red features should be present. This can be easily obtain using the values we created through feature engineering. <br/>
@@ -157,6 +175,13 @@ Important features derived from Random Forest
 <br />
 <br />
 
+### Recommendations
+Gold differential between both teams is the most important indicator for a team’s success. Therefore:
+
+**Aim to obtain a gold lead in the early stages of the game through means such as first blood and dragon**
+
+**Maintain said gold lead**
+
 ## Final Note
 
 Our project successfully addressed the problem of predicting the outcome of a League of Legends game based on various in-game metrics. By utilizing machine learning techniques such as Recursive Feature Elimination and the Random Forest Classifier, we were able to identify key features and achieve a significantly higher accuracy rate than previous models.
@@ -171,6 +196,16 @@ Furthermore, while our analysis was limited to the Diamond 1 - masters, it is li
 
 Model Used: Logistic Regression, Random Forest Classifier<br/>
 Others: RFECV, ROC Curve
+
+<br />
+
+**What did we learn fromt this project?**
+
+- Min-max normalization <br/>
+- Logistic regression<br/>
+- Collaborating on Google colab<br/>
+- Various scikit learn modules (Classification report, ROC curve, StratifiedKFold)
+
 
 ### Contributors
 [Clarence](https://github.com/clarenve) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
