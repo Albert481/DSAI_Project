@@ -167,7 +167,7 @@ Others: RFECV, ROC Curve
 - Collaborating on Google colab<br/>
 - Various scikit learn modules (Classification report, ROC curve, StratifiedKFold)
 
-<br />
+
 ### Contributors
 [Clarence](https://github.com/clarenve) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
 [Albert Yu](https://github.com/Albert481) - Machine Learning, Core Analysis, Improvement<br>
