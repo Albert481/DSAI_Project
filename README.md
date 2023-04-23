@@ -36,19 +36,19 @@ blah
 
 ## Visualization
 
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.jpg)
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
 
-![winffirstflood](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winfirstblood.jpg)
+![winffirstflood](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winfirstblood.png)
 
-![winherald](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winherald.jpg)
+![winherald](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winherald.png)
 
-![windragon](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/windragon.jpg)
+![windragon](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/windragon.png)
 
-![corr](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.jpg)
+![corr](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.png)
 
-![winvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsgold.jpg)
+![winvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsgold.png)
 
-![winvsxp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsxp.jpg)
+![winvsxp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsxp.png)
 
 ---
 <br />
