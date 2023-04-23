@@ -25,6 +25,7 @@ Chosen Dataset:
 
 **Motivation & Problem definition**
 *Are we able to predict the outcome of a game based on the early stages?*
+
 *What should we do in the early game to maximize our chances of winning?*
 
 ---
@@ -137,9 +138,9 @@ Important features derived from Random Forest
 ### Recommendations
 Gold differential between both teams is the most important indicator for a team’s success. Therefore:
 
-*Aim to obtain a gold lead in the early stages of the game through means such as first blood and dragon*
+**Aim to obtain a gold lead in the early stages of the game through means such as first blood and dragon**
 
-*Maintain said gold lead*
+**Maintain said gold lead**
 
 ## Final Note
 
@@ -156,6 +157,15 @@ Furthermore, while our analysis was limited to the Diamond 1 - masters, it is li
 Model Used: Logistic Regression, Random Forest Classifier<br/>
 Others: RFECV, ROC Curve
 
+<br />
+
+***What did we learn fromt this project?
+Min-max normalization
+Logistic regression
+Collaborating on Google colab
+Various scikit learn modules (Classification report, ROC curve, StratifiedKFold)
+
+<br />
 ### Contributors
 [Clarence](https://github.com/clarenve) - Data Scraping, Data Preparation, Exploratory Data Analysis, Feature Engineering<br>
 [Albert Yu](https://github.com/Albert481) - Machine Learning, Core Analysis, Improvement<br>
