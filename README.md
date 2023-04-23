@@ -48,7 +48,30 @@ Chosen Dataset:
 **Exploratory Data Analysis**
 <br />
 
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png|)
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
+
+We observe that win rates are about 50% for both teams. This indicates a balanced game with no advantage for being on one team or the other.
+
+![winrateWStats](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrateWStats.png)
+
+Plotting vertical bar graphs, we see that First Blood, First Herald and First Dragon are important objectives that improve the winrates by an average of 20%.
+
+![corre](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.png)
+
+A heatmap helpes us visually analyse the relationships between variables. We note that blueGoldDiff and blueExperieneDiff have the highest correlation to winning games. They represent the difference in gold and experience between both teams at the 10 minute mark. We can use scatterplots to visualize this relationship.
+
+![winsvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winratevsgold.png)
+
+From this scatterplot, we observe that just having a 1000 gold lead at 10 minutes drastically increased the winrate to about 75%. It continues to increase till around a 4700 gold lead where it basically guarantees a win.
+
+![winsvsexp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winratevsexp.png)
+
+Similarly, we can see a similar relationship with experience lead where it starts at a 75% winrate at a 1000 experience point lead, skyrocketing to a 100% win rate at around 3300 experience points.
+
+![netkillsWin](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/netkillsWin.png)
+
+Lastly, we plotted 2 boxplots to see the how the difference in kills between both teams at 10 minutes can affect the outcome of the game. Unsurprisingly, what we notice is that winning teams tend to have slightly more net kills.
+
 
 
 
