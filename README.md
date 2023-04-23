@@ -160,11 +160,12 @@ Others: RFECV, ROC Curve
 
 <br />
 
-***What did we learn fromt this project?
-Min-max normalization
-Logistic regression
-Collaborating on Google colab
-Various scikit learn modules (Classification report, ROC curve, StratifiedKFold)
+**What did we learn fromt this project?**
+
+- Min-max normalization <br/>
+- Logistic regression<br/>
+- Collaborating on Google colab<br/>
+- Various scikit learn modules (Classification report, ROC curve, StratifiedKFold)
 
 <br />
 ### Contributors
