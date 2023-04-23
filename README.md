@@ -10,10 +10,15 @@ This is our mini-project for SC1015, Introduction to Data Science & Artificial I
 Our source code:
 [SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
+---
+
+### Dataset
+
 Chosen Dataset:
 [Dataset from Kaggle](https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min?select=high_diamond_ranked_10min.csv)
 
 This dataset contains data for ranked game from Diamond 1 - Master
+
 Size of the dataset is 9879
 
 ---
