@@ -23,6 +23,8 @@ Chosen Dataset:
 
 <br/>
 
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
+
 **Motivation & Problem definition**
 
 *Are we able to predict the outcome of a game based on the early stages?*
