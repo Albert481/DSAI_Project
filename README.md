@@ -10,11 +10,12 @@ League of Legends (LoL) is a highly popular multiplayer online battle arena game
 ---
 <br />
 
-## About
+## Introduction
 
 <br />
-This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence. Our source code:
-<br />
+This is our mini-project for SC1015, Introduction to Data Science & Artificial Intelligence. 
+
+Our source code:
 
 [SC1015](https://github.com/Albert481/DSAI_Project/blob/main/SC1015_fin.ipynb)
 
@@ -23,9 +24,8 @@ Chosen Dataset:
 
 <br/>
 
-![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png)
 
-**Motivation & Problem definition**
+**Motivation & Problem Definition**
 
 *Are we able to predict the outcome of a game based on the early stages?*
 <br/>
@@ -33,6 +33,27 @@ Chosen Dataset:
 *What should we do in the early game to maximize our chances of winning?*
 
 ---
+
+**Data Cleaning & Data Preparation**
+
+1. Check for completeness of data
+2. Check for duplicates
+3. Filtering data to fit our problem
+4. Remove columns that represent same statistics (to avoid multicollinearity)
+5. Remove outliers
+6. Apply min-max normalization
+
+---
+
+**Exploratory Data Analysis**
+<br />
+
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.png|)
+
+
+
+
+
 <br />
 
 ## Machine Learning & Optimization
