@@ -34,6 +34,26 @@ blah
 ---
 <br />
 
+## Visualization
+
+![winrate](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winrate.jpg)
+
+![winffirstflood](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winfirstblood.jpg)
+
+![winherald](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winherald.jpg)
+
+![windragon](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/windragon.jpg)
+
+![corr](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/corr.jpg)
+
+![winvsgold](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsgold.jpg)
+
+![winvsxp](https://github.com/Albert481/DSAI_Project/raw/main/repo_images/winvsxp.jpg)
+
+---
+<br />
+
+
 ### Classification Report: Logistic Regression with all 32 variables <br/>
 
 Initially we trained the model with all 32 variables and found that there are many variables are insignificant. We need to reduce the number of variables.
